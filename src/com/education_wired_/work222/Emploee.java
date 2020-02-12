@@ -12,6 +12,10 @@ public class Emploee {
         return numberOfEmploees;
     }
 
+    {
+        numberOfEmploees++;
+    }
+
     public Emploee() {
         numberOfEmploees++;
     }
