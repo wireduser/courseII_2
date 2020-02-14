@@ -9,7 +9,10 @@ public class ID {
     private static int nextId;
 
     static {
-        nextId = (int)(Math.random()*100);
+        // nextId = (int)(Math.random()*100);
+        // або
+        Random random = new Random();
+        nextId = random.nextInt(100) + 1;
     }
 
     {

@@ -17,7 +17,7 @@ public class Emploee {
     }
 
     public Emploee() {
-        numberOfEmploees++;
+
     }
 
     public Emploee(String firstName, String lastName, String occupation, long telePhone) {
@@ -25,7 +25,7 @@ public class Emploee {
         this.lastName = lastName;
         this.occupation = occupation;
         this.telePhone = telePhone;
-        numberOfEmploees++;
+        
     }
 
     public String getFirstName() {
