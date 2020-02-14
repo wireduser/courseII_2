@@ -1,5 +1,6 @@
 package com.education_wired_.work224;
-import com.education_wired_.work224.calcarea.*;
+
+import com.education_wired_.work224.calcarea.Calculate;
 
 import java.util.Scanner;
 
