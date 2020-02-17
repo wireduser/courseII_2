@@ -1,7 +1,7 @@
 package com.education_wired_.work224;
 
 
-import com.education_wired_.work224.calcarea.Calculate;
+//import com.education_wired_.work224.calcarea.Calculate;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Runner {
         Scanner scd = new Scanner(System.in);
         System.out.print("Enter a circle diameter -> ");
         diameter = scd.nextInt();
-        System.out.println(" circle area - " + Calculate.areaCircle(diameter));
+        //System.out.println(" circle area - " + Calculate.areaCircle(diameter));
 
         Scanner sch = new Scanner(System.in);
         System.out.print("Enter a square width -> ");
@@ -22,7 +22,7 @@ public class Runner {
         Scanner scw = new Scanner(System.in);
         System.out.print("Enter a square height -> ");
         width= scw.nextInt();
-        System.out.println(" square area - " + Calculate.areaSquare(height,width));
+        //System.out.println(" square area - " + Calculate.areaSquare(height,width));
 
     }
 }

@@ -44,4 +44,19 @@ public class Device {
                 ", manufacturer=" + manufacturer +
                 ", price=" + price;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || !(obj instanceof Device)) return false;
+        Device other = (Device)obj;
+        if (this.price != other.price) return  false;
+        if ( !this.serialNumber.equals(other.serialNumber)) return false;
+        return this.manufacturer.equals(other.manufacturer);
+    }
 }

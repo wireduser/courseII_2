@@ -32,4 +32,13 @@ public class Monitor extends Device {
                 ", x=" + x +
                 ", y=" + y ;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (super.equals(obj)) return false;
+        if (!(obj instanceof Monitor)) return false;
+        Monitor other = (Monitor) obj;
+        if (this.x != other.x) return false;
+        return this.y == other.y;
+    }
 }
