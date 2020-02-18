@@ -4,20 +4,14 @@ import com.education_wired_.work225.Device;
 
 public class Runner {
     public static void run( ){
-        System.out.println(  new Shape("red").toString() );
-        System.out.println( new Circle(12).toString());
-        System.out.println( new Circle(23).calcArea());
-        System.out.println( new Rectangle(13,13).toString());
-        System.out.println( new Rectangle(13,13).calcArea());
-        System.out.println( new Triangle(2,3,4).calcArea());
         Shape[] shapes = createShapes();
         infoShapes(shapes);
         System.out.println(areaShapes(shapes));
         System.out.println("area Triangle = " + areaShapes(shapes, "Triangle"));
         System.out.println("area Circle = " + areaShapes(shapes, "Circle"));
         System.out.println("area Rectangle = " + areaShapes(shapes, "Rectangle"));
-
-        return ;
+        double[] areas = areaShapesByObj(shapes);
+        printAllAreasByObj(areas);
     }
 
     public static Shape[] createShapes(){
@@ -56,5 +50,23 @@ public class Runner {
         }
         return area;
     }
+
+    public static double[] areaShapesByObj (Shape[] shapes){
+        double[] areas = new double [3];
+        for (Shape shape: shapes){
+            if (shape instanceof Circle) areas[0] += shape.calcArea();
+            else if (shape instanceof Triangle) areas[1] += shape.calcArea();
+            else if (shape instanceof Rectangle) areas[2] += shape.calcArea();
+        }
+        return areas;
+    }
+
+    public static void printAllAreasByObj (double[] areas){
+        System.out.println("area Circle = " + areas[0]);
+        System.out.println("area Triangle = " + areas[1]);
+        System.out.println("area Rectangle = " + areas[2]);
+    }
+
+
 
 }
