@@ -5,6 +5,7 @@ public class Shape {
     public double calcArea(){
     return 0.0;
     };
+
     public Shape() {
 
     }
@@ -23,6 +24,6 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "class = " + this.getClass().getSimpleName()+ ", color = " + color;
+        return "class = " + this.getClass().getSimpleName()+ ": color = " + color;
     }
 }

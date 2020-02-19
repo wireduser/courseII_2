@@ -32,4 +32,21 @@ public class Adapter extends Device {
                 ", speed=" + speed +
                 ", mac='" + mac ;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (super.equals(obj)) return false;
+        if (!(obj instanceof Adapter)) return false;
+        Adapter other = (Adapter) obj;
+        if (this.speed != other.speed) return false;
+        return this.mac.equals(other.mac) ;
+    }
+
+    @Override
+    public int hashCode() {
+        int sum = super.hashCode();
+        sum = 31 * sum + speed;
+        sum = 31 * sum + mac.hashCode();
+        return sum;
+    }
 }

@@ -47,7 +47,12 @@ public class Device {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        int sum = 17;
+        sum = 31 * sum + serialNumber.hashCode();
+        sum = 31 * sum + manufacturer.hashCode();
+        long rw = Double.doubleToLongBits(price);
+        sum = 31 * sum + (int)(rw ^ (rw >>> 32));
+        return sum;
     }
 
     @Override

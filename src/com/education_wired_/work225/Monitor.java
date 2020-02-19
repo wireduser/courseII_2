@@ -41,4 +41,12 @@ public class Monitor extends Device {
         if (this.x != other.x) return false;
         return this.y == other.y;
     }
+
+    @Override
+    public int hashCode() {
+        int sum = super.hashCode();
+        sum = 31 * sum + x ;
+        sum = 31 * sum + y ;
+        return sum;
+    }
 }
